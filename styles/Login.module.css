@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.container {
+  
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.logo {
+  width: 50%;
+  max-width: 200px;
+
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 6vw;
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px 4px black;
+  margin-bottom: 0.1rem;
+  margin-top: 5rem;
+}
+
+.button {
+  display: flex;
+  justify-content: right;
+  background-image: url('/Images/google.jpg');
+  background-position: left;
+  padding: 1em 1em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: white;
+  border-radius: 50px;
+  color: black;
+  font-size: 3vw;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  max-height: 10vh;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: self-end;
+}
+
+.buttonText {
+  font-size: inherit;
+  margin-left: 3rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+  }
+  .title {
+    font-size: 4vw;
+  }
+  .button {
+    font-size: 1vw;
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 3vw;
+  }
+  .button {
+    font-size: 1.5vw;
+  }
+}
+
