@@ -6,25 +6,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-items: center;
-  width: 400px;
+  justify-content: center;
+  width: 1500px;
   height: auto;
 }
 
 .fondo{
-  width: 400px;
+  width: 500px;
   height: auto;
-
 }
+
 .content {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: absolute; 
+  top: 55%; 
   max-width: 100%;
 }
 
@@ -39,8 +33,6 @@
   font-weight: bold;
   color: black;
   text-shadow: 1px 1px 4px black;
-  margin-bottom: 0.1rem;
-  margin-top: 5rem;
 }
 
 .p{
@@ -48,6 +40,7 @@
   font-size: 2vw;
   font-weight: bold;
   color: black;
+  
 }
 
 .button {
@@ -55,7 +48,7 @@
   justify-content: right;
   background-image: url('/Images/google.jpg');
   background-position: left;
-  padding: 1em 1em;
+  padding: 0.5em 0.5em;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: white;
@@ -64,7 +57,7 @@
   font-size: 3vw;
   margin-top: 0.5rem;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   max-height: 10vh;
 }
 
