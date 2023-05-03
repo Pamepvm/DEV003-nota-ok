@@ -1,7 +1,7 @@
 import { auth } from "./confirebase.js";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-export const googleAuth = () => {
+export const googleAuth = (router) => {
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
   .then((result) => {
@@ -10,9 +10,13 @@ export const googleAuth = () => {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    console.log(user,'user')
+    console.log(user, 'user')
+    if(user.emailVerified){
+       router.push('/Wall');
+    }
     // IdP data available using getAdditionalUserInfo(result)
     // ...
+   if (!user.emailVerified) throw new Error('Email not verified');
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;

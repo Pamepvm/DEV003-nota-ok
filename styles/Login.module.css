@@ -1,44 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-.container {
-  
-  background-size: cover;
-  background-position: center;
+
+.container { 
+  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-
-.backgroundImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  align-items: center;
+  width: 400px;
   height: auto;
-  z-index: -1;
-  object-fit: cover;
 }
 
+.fondo{
+  width: 400px;
+  height: auto;
+
+}
 .content {
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   max-width: 100%;
 }
 
 .logo {
   width: 50%;
   max-width: 200px;
-
 }
 
 .title {
@@ -49,6 +41,13 @@
   text-shadow: 1px 1px 4px black;
   margin-bottom: 0.1rem;
   margin-top: 5rem;
+}
+
+.p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: black;
 }
 
 .button {
@@ -82,20 +81,36 @@
 @media (max-width: 600px) {
   .container {
     width: 100%;
+    padding: 0 1rem;
   }
 }
 
 @media (min-width: 768px) {
   .content {
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   .title {
     font-size: 4vw;
+    margin-top: 0;
+    margin-bottom: 1vw;
+    text-align: left;
+  }
+  .p {
+    font-size: 2vw;
+    margin-top: 0;
+    margin-bottom: 2vw;
+    text-align: left;
   }
   .button {
-    font-size: 1vw;
+    font-size: 1.5vw;
     margin-top: 0;
-    margin-left: 2rem;
+    margin-left: 2vw;
+  }
+  .buttonText {
+    font-size: 2vw;
+    margin-left: 3vw;
   }
 }
 

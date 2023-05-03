@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Login from './Login.js'
-
+import Wall from './Wall.js'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +20,9 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
       
        
-       <Login></Login>
+        <Login></Login>
+        <Wall></Wall>
+        
       </main>
     </>
   )
