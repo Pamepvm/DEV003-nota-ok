@@ -22,7 +22,7 @@ const Login = () => {
             <h1 className={styles.title}>Crea tus notas</h1>
             <p className={styles.p}>Y refresca tus ideas</p>
           </div>
-          <button className={`${styles.button} button`} onClick={Init}>Continuar con Google</button>
+          <button className={`${styles.button} button`} onClick={Init}></button>
         </div>
       </div>
     );

@@ -8,7 +8,15 @@
 }
 
 .note{
-  width: 50%;
-  padding: 4rem;
+  font-family: 'Poppins', sans-serif;
+  width: 40%;
+  padding: 2rem;
+  box-shadow: 1px 1.5px 3px gray;
+  margin: 0 auto 2rem;
+  display: flex;
+}
 
+.deleteButton{
+  background-image: url('./public/Imagenes/delete.svg');
+  cursor: pointer; 
 }

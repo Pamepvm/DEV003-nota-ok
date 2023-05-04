@@ -7,12 +7,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 1500px;
-  height: auto;
+  margin: 0 auto 2rem;
 }
 
 .fondo{
-  width: 500px;
+  width: 400px;
   height: auto;
 }
 
@@ -23,41 +22,37 @@
 }
 
 .logo {
-  width: 50%;
+  width: 80%;
   max-width: 200px;
 }
 
 .title {
   font-family: 'Poppins', sans-serif;
-  font-size: 6vw;
   font-weight: bold;
   color: black;
   text-shadow: 1px 1px 4px black;
+  margin-bottom: 1rem;
 }
 
 .p{
   font-family: 'Poppins', sans-serif;
-  font-size: 2vw;
   font-weight: bold;
   color: black;
-  
 }
 
 .button {
   display: flex;
-  justify-content: right;
-  background-image: url('/Images/google.jpg');
-  background-position: left;
-  padding: 0.5em 0.5em;
+  justify-content: center;
+  background-image: url('/Images/Googlecont.jpg');
+  background-position: center;
+  padding: 1em 2em;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: white;
-  border-radius: 50px;
-  color: black;
-  font-size: 3vw;
+  border-radius:20px;
   margin-top: 0.5rem;
   cursor: pointer;
-  width: 50%;
+  width: 70%;
   max-height: 10vh;
 }
 
@@ -84,18 +79,19 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .title {
-    font-size: 4vw;
+    font-size: 3vw;
     margin-top: 0;
     margin-bottom: 1vw;
     text-align: left;
   }
+
   .p {
     font-size: 2vw;
-    margin-top: 0;
-    margin-bottom: 2vw;
     text-align: left;
   }
+
   .button {
     font-size: 1.5vw;
     margin-top: 0;
