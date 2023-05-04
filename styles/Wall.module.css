@@ -7,6 +7,13 @@
   text-shadow: 1px 1px 4px black;
 }
 
+.notesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  grid-auto-rows: minmax(10rem, auto);
+}
+
 .note{
   font-family: 'Poppins', sans-serif;
   width: 40%;
@@ -14,9 +21,18 @@
   box-shadow: 1px 1.5px 3px gray;
   margin: 0 auto 2rem;
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.note:hover{
+  background: rgb(68, 203, 221);
+  transform: translateY(-3%);
 }
 
 .deleteButton{
-  background-image: url('./public/Imagenes/delete.svg');
-  cursor: pointer; 
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-self: flex-end; 
 }
