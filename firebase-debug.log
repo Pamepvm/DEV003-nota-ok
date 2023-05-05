@@ -1,0 +1,21 @@
+[debug] [2023-05-04T22:37:44.779Z] ----------------------------------------------------------------------
+[debug] [2023-05-04T22:37:44.781Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\aherr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-05-04T22:37:44.781Z] CLI Version:   11.30.0
+[debug] [2023-05-04T22:37:44.782Z] Platform:      win32
+[debug] [2023-05-04T22:37:44.782Z] Node Version:  v18.16.0
+[debug] [2023-05-04T22:37:44.782Z] Time:          Thu May 04 2023 18:37:44 GMT-0400 (hora estándar de Chile)
+[debug] [2023-05-04T22:37:44.783Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-04T22:37:44.792Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-04T22:37:44.792Z] > authorizing via signed-in user (redchilesolidario@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\aherr\OneDrive\Documentos\Escritorio\DEV003-nota-ok
+
