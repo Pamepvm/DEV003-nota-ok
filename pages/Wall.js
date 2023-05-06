@@ -24,7 +24,7 @@ return (
         <h1 className={styles.title}>Notas</h1>
       
       <input
-        className={styles.note} placeholder="Escribe una nota"
+        className={`${styles.note} ${styles.noteInput}`} placeholder="Escribe una nota" 
         value={currentNote}// mensaje se ingresa y se guarda en currentNote, para saber el estado del input
         onChange={(e) => setCurrentNote(e.target.value)}//actualizo el estado
         onKeyDown={(e) => {
@@ -42,7 +42,7 @@ return (
           <div key={index} className={styles.note}> 
             {note}
             <button className={styles.deleteButton} onClick={() => noteDelete(index)}>
-              <img className={styles.delete} src="/Images/delete.svg" alt="Delete Note"/>
+              <img className={styles.delete} src="/Images/delete_white_24dp.svg" alt="Delete Note"/>
             </button>
           </div>
         ))}
