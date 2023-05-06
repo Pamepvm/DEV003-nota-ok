@@ -20,7 +20,10 @@ export default function Wall() {
 
 return (
     <div>
-      <div className={styles.topBar}></div>
+      <div className={styles.topBar}> <button className={styles.exitButton}   onClick={() => { window.location.href = '/'; }}>
+        <img className={styles.exitButton} src="/Images/cancel_presentation_black_24dp.svg" alt="salir"/></button>
+
+      </div>
         <h1 className={styles.title}>Notas</h1>
       
       <input
