@@ -1,4 +1,4 @@
-import { useState } from 'react'; //variables que se repiten en una página
+import { useState } from 'react'; //permite agregar estados a un componente funcional
 import styles from '../styles/Wall.module.css';
 import { guardarNota } from './funcionesfirebase.js';
 
@@ -12,15 +12,15 @@ export default function Wall() {
 
   function saveNote() {
     if (currentNote.trim() !== '') { // si se ingresa algun texto y eliminar los espacios
-      guardarNota(currentNote);// cambiar guardaNota por guardarNota
-      setCurrentNote(''); // reiniciar el estado currentNote
-      setNotes([...notes, currentNote]);
+      guardarNota(currentNote);// guardo nota en firebase, tomo como argumento el contenido de la nota
+      setCurrentNote(''); // reiniciar el estado currentNote para ingresar otro texto
+      setNotes([...notes, currentNote]);//agrego currentNote a notes y actualizo el estado con la nueva matriz
     }
-  }
+  } 
 
 return (
     <div>
-      <div className={styles.topBar}> <button className={styles.exitButton}   onClick={() => { window.location.href = '/'; }}>
+      <div className={styles.topBar}> <button className={styles.exitButton} onClick={() => { window.location.href = '/'; }}>
         <img className={styles.exitButton} src="/Images/cancel_presentation_black_24dp.svg" alt="salir"/></button>
 
       </div>
