@@ -64,5 +64,5 @@ export const obtenerNotas = async () => {
 
 export const eliminarNota = (id) => {
   // console.log('=>', id)
-  deleteDoc(doc(db, "notas, id"));
+  deleteDoc(doc(db, "notas", id));
 };
