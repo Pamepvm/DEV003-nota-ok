@@ -24,12 +24,6 @@ export default function Wall() {
     setNotes([...fetchedNotes]);
   }, [fetchedNotes]);
 
-  /*function noteDelete(index) {
-    const newNotes = [...notes];
-    newNotes.splice(index, 1);
-    setNotes(newNotes);
-  }*/
-
   function saveNote() {
     if (currentNote.trim() !== "") {
       // si se ingresa algun texto y eliminar los espacios
