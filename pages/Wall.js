@@ -9,37 +9,37 @@ import {
 export default function Wall() {
   const [notes, setNotes] = useState([]); // estado de las notas y fun. que setNotes actualiza los datos
   const [currentNote, setCurrentNote] = useState(""); // agrego el estado para la nota actual
-  //const [fetchedNotes, setFetchedNotes] = useState([]); // crear nuevo estado para matener los textos descargados
-
-  const obtenerNotasFirebase = async () => {
-    const fetchedData = await obtenerNotas();
-    setNotes(fetchedData);
-  };
 
   useEffect(() => {
     obtenerNotasFirebase();
   }, []);
 
-  /*useEffect(() => {
-    setNotes([...fetchedNotes]);
-  }, [fetchedNotes]);*/
+  async function obtenerNotasFirebase() {
+    const fetchedData = await obtenerNotas();
+    setNotes(fetchedData);
+  }
 
   function saveNote() {
     if (currentNote.trim() !== "") {
       // si se ingresa algun texto y eliminar los espacios
       guardarNota(currentNote); // guardo nota en firebase, tomo como argumento el contenido de la nota
       setCurrentNote(""); // reiniciar el estado currentNote para ingresar otro texto
-      //setNotes([...notes, currentNote]); //agrego currentNote a notes y actualizo el estado con la nueva matriz
+      obtenerNotasFirebase();
     }
   }
   function deleteNote(noteId) {
     eliminarNota(noteId);
     //const newNotes = notes.filter((note) => note.id !== noteId);
-    setNotes(notes.filter((note) => note.id !== noteId));
+    setNotes(notes.filter((nota) => nota.id !== notaId));
   }
   useEffect(() => {
     obtenerNotasFirebase();
   }, [notes]);
+
+  /*function sortNotes() {
+    const sortedNotes = [...notes].sort((a, b) => b.fecha - a.fecha);
+    setNotes(sortedNotes);
+  }*/
 
   return (
     <div>
@@ -76,21 +76,23 @@ export default function Wall() {
       </button>
 
       <div className={styles.notesContainer}>
-        {notes.map((note) => (
-          <div key={note.id} className={styles.note}>
-            {note.contenido}
-            <button
-              className={styles.deleteButton}
-              onClick={() => deleteNote(note.id)}
-            >
-              <img
-                className={styles.delete}
-                src="/Images/delete_white_24dp.svg"
-                alt="Delete Note"
-              />
-            </button>
-          </div>
-        ))}
+        {notes
+          .sort((a, b) => b.timestamp - a.timestamp) // ordenar notas por fecha descendente
+          .map((note) => (
+            <div key={note.id} className={styles.note}>
+              {note.contenido}
+              <button
+                className={styles.deleteButton}
+                onClick={() => deleteNote(note.id)}
+              >
+                <img
+                  className={styles.delete}
+                  src="/Images/delete_white_24dp.svg"
+                  alt="Delete Note"
+                />
+              </button>
+            </div>
+          ))}
       </div>
     </div>
   );
