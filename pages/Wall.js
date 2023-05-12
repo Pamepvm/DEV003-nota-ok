@@ -9,20 +9,20 @@ import {
 export default function Wall() {
   const [notes, setNotes] = useState([]); // estado de las notas y fun. que setNotes actualiza los datos
   const [currentNote, setCurrentNote] = useState(""); // agrego el estado para la nota actual
-  const [fetchedNotes, setFetchedNotes] = useState([]); // crear nuevo estado para matener los textos descargados
+  //const [fetchedNotes, setFetchedNotes] = useState([]); // crear nuevo estado para matener los textos descargados
 
   const obtenerNotasFirebase = async () => {
     const fetchedData = await obtenerNotas();
-    setFetchedNotes(fetchedData);
+    setNotes(fetchedData);
   };
 
   useEffect(() => {
     obtenerNotasFirebase();
   }, []);
 
-  useEffect(() => {
+  /*useEffect(() => {
     setNotes([...fetchedNotes]);
-  }, [fetchedNotes]);
+  }, [fetchedNotes]);*/
 
   function saveNote() {
     if (currentNote.trim() !== "") {
@@ -34,9 +34,13 @@ export default function Wall() {
   }
   function deleteNote(noteId) {
     eliminarNota(noteId);
-    const newNotes = notes.filter((note) => note.id !== noteId);
-    setNotes(newNotes);
+    //const newNotes = notes.filter((note) => note.id !== noteId);
+    setNotes(notes.filter((note) => note.id !== noteId));
   }
+  useEffect(() => {
+    obtenerNotasFirebase();
+  }, [notes]);
+
   return (
     <div>
       <div className={styles.topBar}>
