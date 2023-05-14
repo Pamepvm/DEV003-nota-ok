@@ -30,7 +30,7 @@ export default function Wall() {
   function deleteNote(noteId) {
     eliminarNota(noteId);
     //const newNotes = notes.filter((note) => note.id !== noteId);
-    setNotes(notes.filter((nota) => nota.id !== notaId));
+    setNotes(notes.filter((nota) => nota.id !== noteId));
   }
   useEffect(() => {
     obtenerNotasFirebase();
@@ -58,7 +58,6 @@ export default function Wall() {
         </button>
       </div>
       <h1 className={styles.title}>Notas</h1>
-
       <input
         className={`${styles.note} ${styles.noteInput}`}
         placeholder="Escribe una nota"
